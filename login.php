@@ -1,6 +1,7 @@
 <?php
     session_start();
-    require_once('pages/connection.php');
+    require_once('connection.php');
+    $message = "";
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +37,7 @@
 
         <h1 id="h">World Congress 2017 <small>Login</small></h1>
 
-        <form class="form-horizontal" action="view">
+        <form method="post" class="form-horizontal" action="">
 
             <br>
             <br>
@@ -59,7 +60,7 @@
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
 
-                        <button type="submit" class="btn btn-default">Login</button>
+                        <button type="submit" name="submit" class="btn btn-default">Login</button>
                         <span class="glyphicon glyphicon-home"></span>
                         <a href="#" class="btn btn-large btn-primary">Home</a>
                     </div>
@@ -70,29 +71,24 @@
 </html>
 
 <?php
-    if(isset($_GET["logout"])) {
-        unset($_SESSION["username"]);
-        $message = "You are logged out";
-    }
 
     if(isset($_POST["submit"])) {
 
-        $email = $_POST["username"];
-        $password = md5($_POST["password"]);
+        $username = $_POST["username"];
+        $password = $_POST["password"];
 
         // Querying the user table
-        $sql = "SELECT username, password FROM user WHERE username='$username' AND password='$password'";
+        $sql = "SELECT username, password FROM User WHERE username='$username' AND password='$password'";
         $result = $connection->query($sql);
 
         if($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             $_SESSION["username"]=$username;
             $message = "<font color=green> <br/> <b> Login Success </b> </font>";
-            header("Location: dashboard.php");
+            header("Location: SessionView.php");
 
         } else {
             $message = "<font color=red> <br/> <b> Wrong username or password.<br>Please try again.</b> </font>";
-            $message = $message . "<p>If you are a new user<br/><a href='pages/role.php'>Sign Up</a></p>";
         }
     }
 
