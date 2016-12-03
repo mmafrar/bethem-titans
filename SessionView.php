@@ -48,7 +48,8 @@
     </head>
     <body>
 
-        <h1 id="h">World Congress 2017 <small>Session</small></h1>
+        <h1 id="h">World Congress 2017 <small>Session - My favorites</small></h1>
+        <h1 id=h><small>My Favorites</small></h>
 
         <form class="form-horizontal" action="view">
 
@@ -134,7 +135,7 @@
                     <br>
 
                     <span class="glyphicon glyphicon-home"></span>
-                    <a href="#" class="btn btn-large btn-primary">Home</a>
+                    <a href="UserDashboard.php" class="btn btn-large btn-primary">Home</a>
                 </div>
 
                 <div class="form-group">

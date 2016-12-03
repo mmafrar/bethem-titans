@@ -60,8 +60,8 @@
                     </tr>
                 </table>
                 <h4>My Sessions</h4>
-                <p><a href="Fav.php">Favorite Sessions</a></p>
-                <p><a href="SessionView.php">Visited Sessions</a></p>
+                <p><a href="SessionViewFavorite.php">Favorite Sessions</a></p>
+                <p><a href="SessionView.php">View Sessions</a></p>
                 <h4>My Questions</h4>
                 <div class="panel panel-default">
                     <div class="panel-body"><strong>How to print hello in PHP?</strong>
