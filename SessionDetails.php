@@ -22,6 +22,7 @@ mysqli_close($conn);
 ?>
 <html>
     <head>
+    <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <style>
@@ -33,15 +34,22 @@ mysqli_close($conn);
                 margin:20px;
                 padding: 20px;
             }
+
             h1{
                 text-align:center;
             }
+
             span{
                 padding: 20px;
             }
+            button{
+                width: 500px
+            }
+            
+            body{
+                background-image: url("img/back.jpg")
+            }
         </style>
-
-
         <title>View </title>
     </head>
     <body>

@@ -58,39 +58,20 @@
                 <div class="col-md-6">
 
                     <button type="button" class="btn btn-default "><h4>Session 01 </h4> [09:00 - 10:00]  </button>
-                    <button type="button" id="testBtn" class="btn btn-default glyphicon glyphicon-heart-empty " data-loading-text=" ... "></button>
+                    <button type="button" id="testBtn" class="btn btn-default glyphicon glyphicon-heart " data-loading-text=" ... "></button>
 
                     <br>
                     <br>
                     <button type="button" class="btn btn-primary "><h4>Session 02 </h4> [10:00 - 11:30]</button>
-                    <button type="button" id="testBtn" class="btn btn-default glyphicon glyphicon-heart-empty " data-loading-text=" ... "></button>
+                    <button type="button" id="testBtn" class="btn btn-default glyphicon glyphicon-heart " data-loading-text=" ... "></button>
 
                     <br>
                     <br>
                     <button type="button" class="btn btn-success "><h4>Session 03 </h4>[11:30 - 12:30]</button>
-                    <button type="button" id="testBtn" class="btn btn-default glyphicon glyphicon-heart-empty " data-loading-text=" ... "></button>
+                    <button type="button" id="testBtn" class="btn btn-default glyphicon glyphicon-heart " data-loading-text=" ... "></button>
 
                     <br>
-                    <br>
-                    <button type="button" class="btn btn-info "><h4>Session 04 </h4> [12:30 - 14:00]</button>
-                    <button type="button" id="testBtn" class="btn btn-default glyphicon glyphicon-heart-empty " data-loading-text=" ... "></button>
-
-                    <br>
-                    <br>
-                    <button type="button" class="btn btn-warning "><h4>Session 05 </h4>[14:00 - 15:30]</button>
-                    <button type="button" id="testBtn" class="btn btn-default glyphicon glyphicon-heart-empty " data-loading-text=" ... "></button>
-                    <br>
-                    <br>
-                    <button type="button" class="btn btn-danger "><h4>Session 06 </h4> [15:30 - 17:00]</button>
-                    <button type="button" id="testBtn" class="btn btn-default glyphicon glyphicon-heart-empty " data-loading-text=" ... "></button>
-                    <br>
-                    <br>
-                    <button type="button" class="btn btn-default "><h4>Session 07 </h4> [17:00 - 18:00]</button>
-                    <button type="button" id="testBtn" class="btn btn-default glyphicon glyphicon-heart-empty " data-loading-text=" ... "></button>
-                    <br>
-                    <br>
-                    <button type="button" class="btn btn-info "><h4>Session 08 </h4>[18:00 - 19:00]</button>
-                    <button type="button" id="testBtn" class="btn btn-default glyphicon glyphicon-heart-empty " data-loading-text=" ... "></button>
+                    
 
 
                 <div class="col-md-5">

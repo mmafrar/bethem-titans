@@ -3,38 +3,36 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <style>
-        html,
-        body,
-        head {
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            margin: 20px;
-            padding: 20px;
-        }
-        
-        h1 {
-            text-align: center;
-        }
-        
-        span {
-            padding: 20px;
-        }
-        
-        .vote-count {
-            float: right;
-            font-size: 23px;
-        }
-    </style>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <style>
+            html,body,head{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                margin:20px;
+                padding: 20px;
+            }
 
+            h1{
+                text-align:center;
+            }
 
-    <title>View </title>
-</head>
+            span{
+                padding: 20px;
+            }
+            button{
+                width: 500px
+            }
+            
+            body{
+                background-image: url("img/back.jpg")
+            }
+        </style>
+        <title>View </title>
+    </head>
 
 <body>
 
@@ -63,7 +61,7 @@
                 </table>
                 <h4>My Sessions</h4>
                 <p><a href="Fav.php">Favorite Sessions</a></p>
-                <p><a href="Fav.php">Visited Sessions</a></p>
+                <p><a href="SessionView.php">Visited Sessions</a></p>
                 <h4>My Questions</h4>
                 <div class="panel panel-default">
                     <div class="panel-body"><strong>How to print hello in PHP?</strong>

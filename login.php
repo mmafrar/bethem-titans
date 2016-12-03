@@ -11,7 +11,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <style>
-
             html,body,head{
                 margin: 0;
                 padding: 0;
@@ -28,10 +27,15 @@
             span{
                 padding: 20px;
             }
+            button{
+                width: 500px
+            }
+            
+            body{
+                background-image: url("img/back.jpg")
+            }
         </style>
-
-
-        <title>World Congress 2017 - Login</title>
+        <title>World Congress - 2017</title>
     </head>
     <body>
 
@@ -85,7 +89,7 @@
             $row = $result->fetch_assoc();
             $_SESSION["username"]=$username;
             $message = "<font color=green> <br/> <b> Login Success </b> </font>";
-            header("Location: SessionView.php");
+            header("Location: UserDashboard.php");
 
         } else {
             $message = "<font color=red> <br/> <b> Wrong username or password.<br>Please try again.</b> </font>";
