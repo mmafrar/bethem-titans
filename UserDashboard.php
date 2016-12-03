@@ -84,7 +84,7 @@
             </div>
 
             <div class="col-md-7">
-                <img src="Images/index.jpg" alt="..." class="img-rounded">
+                <img src="img/index.jpg" alt="..." class="img-rounded">
             </div>
 
             <div class="form-group">
