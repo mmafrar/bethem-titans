@@ -113,11 +113,6 @@ ALTER TABLE `Questions`
 -- Constraints for dumped tables
 --
 
---
--- Constraints for table `User`
---
-ALTER TABLE `User`
-  ADD CONSTRAINT `User_ibfk_1` FOREIGN KEY (`username`) REFERENCES `Sessions` (`sessionID`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
