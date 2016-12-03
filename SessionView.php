@@ -22,6 +22,9 @@
             span{
                 padding: 20px;
             }
+            button{
+                width: 500px
+            }
         </style>
 
 
@@ -36,35 +39,50 @@
             <br>
             <br>
             <div class="row">
-                <div class="col-md-5">
-                    <button type="button" class="btn btn-default btn-block"><h4>Session 01 </h4> [09:00 - 10:00]    </button>
+                <div class="col-md-6">
+
+                    <button type="button" class="btn btn-default "><h4>Session 01 </h4> [09:00 - 10:00]  </button>
+                    <button type="button" id="testBtn" class="btn btn-default glyphicon glyphicon-heart-empty " data-loading-text=" ... "></button>
+
                     <br>
                     <br>
-                    <button type="button" class="btn btn-primary btn-block"><h4>Session 02 </h4> [10:00 - 11:30]</button>
+                    <button type="button" class="btn btn-primary "><h4>Session 02 </h4> [10:00 - 11:30]</button>
+                    <button type="button" id="testBtn" class="btn btn-default glyphicon glyphicon-heart-empty " data-loading-text=" ... "></button>
+
                     <br>
                     <br>
-                    <button type="button" class="btn btn-success btn-block"><h4>Session 03 </h4>[11:30 - 12:30]</button>
+                    <button type="button" class="btn btn-success "><h4>Session 03 </h4>[11:30 - 12:30]</button>
+                    <button type="button" id="testBtn" class="btn btn-default glyphicon glyphicon-heart-empty " data-loading-text=" ... "></button>
+
                     <br>
                     <br>
-                    <button type="button" class="btn btn-info btn-block"><h4>Session 04 </h4> [12:30 - 14:00]</button>
+                    <button type="button" class="btn btn-info "><h4>Session 04 </h4> [12:30 - 14:00]</button>
+                    <button type="button" id="testBtn" class="btn btn-default glyphicon glyphicon-heart-empty " data-loading-text=" ... "></button>
+
                     <br>
                     <br>
-                    <button type="button" class="btn btn-warning btn-block"><h4>Session 05 </h4>[14:00 - 15:30]</button>
+                    <button type="button" class="btn btn-warning "><h4>Session 05 </h4>[14:00 - 15:30]</button>
+                    <button type="button" id="testBtn" class="btn btn-default glyphicon glyphicon-heart-empty " data-loading-text=" ... "></button>
                     <br>
                     <br>
-                    <button type="button" class="btn btn-danger btn-block"><h4>Session 06 </h4> [15:30 - 17:00]</button>
+                    <button type="button" class="btn btn-danger "><h4>Session 06 </h4> [15:30 - 17:00]</button>
+                    <button type="button" id="testBtn" class="btn btn-default glyphicon glyphicon-heart-empty " data-loading-text=" ... "></button>
                     <br>
                     <br>
-                    <button type="button" class="btn btn-default btn-block"><h4>Session 07 </h4> [17:00 - 18:00]</button>
+                    <button type="button" class="btn btn-default "><h4>Session 07 </h4> [17:00 - 18:00]</button>
+                    <button type="button" id="testBtn" class="btn btn-default glyphicon glyphicon-heart-empty " data-loading-text=" ... "></button>
                     <br>
                     <br>
-                    <button type="button" class="btn btn-info btn-block"><h4>Session 08 </h4>[18:00 - 19:00]</button>
+                    <button type="button" class="btn btn-info "><h4>Session 08 </h4>[18:00 - 19:00]</button>
+                    <button type="button" id="testBtn" class="btn btn-default glyphicon glyphicon-heart-empty " data-loading-text=" ... "></button>
+
+
                 </div>
 
-                <div class="col-md-7">
+                <div class="col-md-6">
                     <img src="Images/index.jpg" alt="..." class="img-rounded">
                     <br>
-                    
+
                     <span class="glyphicon glyphicon-home"></span>
                     <a href="#" class="btn btn-large btn-primary">Home</a>
                 </div>
@@ -79,3 +97,17 @@
         </form>
     </body>
 </html>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+// Create connection
+$connection = mysqli_connect($servername, $username, $password);
+
+// Check connection
+if (!$connection) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+//echo "Connected successfully";
+
