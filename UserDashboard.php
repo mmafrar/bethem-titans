@@ -61,6 +61,9 @@
                         <td>2016-08-12</td>
                     </tr>
                 </table>
+                <h4>My Sessions</h4>
+                <p><a href="Fav.php">Favorite Sessions</a></p>
+                <p><a href="Fav.php">Visited Sessions</a></p>
                 <h4>My Questions</h4>
                 <div class="panel panel-default">
                     <div class="panel-body"><strong>How to print hello in PHP?</strong>
