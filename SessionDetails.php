@@ -1,5 +1,25 @@
 <!DOCTYPE html>
+<?php require 'DatabaseConnection.php';?>
+//Please send the eventId as the URL parameter to this password_get_info
+<?php $sessionId = 1;?>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "WC2017";
 
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT * FROM `sessions` WHERE sessionId = $sessionId";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+mysqli_close($conn);
+?>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -35,19 +55,23 @@
             <div class="row">
                 <div class="col-md-5">
                     <h4>Event Details</h4>
-                    <table class="table">
+                    <table class="table"><tr>
+                            <td>Session Name</td>
+                            <td><?php echo $row['sessionName'];?></td>
+                        </tr> 
                         <tr>
                             <td>Starting At</td>
-                            <td>12:00:45 AM</td>
+                            <td><?php echo $row['sessionTime'];?></td>
                         </tr>    
-                        <tr>
-                            <td>Ending At</td>
-                            <td>12:00:45 AM</td>
-                        </tr>  
+                         
                         <tr>
                             <td>Speaker</td>
-                            <td>Speaker Name</td>
+                            <td><?php echo $row['PresenterName'];?></td>
                         </tr>    
+                        <tr>
+                            <td>Speaker Qualifications</td>
+                            <td><?php echo $row['PresenterQual'];?></td>
+                        </tr>   
                     </table>
                 </div>
 
@@ -57,7 +81,7 @@
 
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <a href="#" class="btn btn-large btn-primary">Home</a>
+                        <a href="index.php" class="btn btn-large btn-primary">Home</a>
                     </div>
                 </div>
             </div>
