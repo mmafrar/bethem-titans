@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    require_once('pages/connection.php');
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -25,7 +30,7 @@
         </style>
 
 
-        <title>View </title>
+        <title>World Congress 2017 - Login</title>
     </head>
     <body>
 
@@ -39,11 +44,11 @@
                 <div class="col-md-5">
                     <div class="form-group">
                         <label for="exampleInputEmail1">User Name </label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        <input type="input" class="form-control" id="exampleInputEmail1" placeholder="Username" name="username">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
                     </div>
                 </div>
 
@@ -63,3 +68,38 @@
         </form>
     </body>
 </html>
+
+<?php
+    if(isset($_GET["logout"])) {
+        unset($_SESSION["username"]);
+        $message = "You are logged out";
+    }
+
+    if(isset($_POST["submit"])) {
+
+        $email = $_POST["username"];
+        $password = md5($_POST["password"]);
+
+        // Querying the user table
+        $sql = "SELECT username, password FROM user WHERE username='$username' AND password='$password'";
+        $result = $connection->query($sql);
+
+        if($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $_SESSION["username"]=$username;
+            $message = "<font color=green> <br/> <b> Login Success </b> </font>";
+            header("Location: dashboard.php");
+
+        } else {
+            $message = "<font color=red> <br/> <b> Wrong username or password.<br>Please try again.</b> </font>";
+            $message = $message . "<p>If you are a new user<br/><a href='pages/role.php'>Sign Up</a></p>";
+        }
+    }
+
+    echo "<br/>" . $message;
+
+    // Close connection
+    if(isset($connection)){
+        $connection->close();
+    }
+?>
