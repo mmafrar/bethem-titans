@@ -30,6 +30,9 @@
             float: right;
             font-size: 23px;
         }
+        body {
+                background-image:url("img/back.jpg");
+            }
     </style>
 
 

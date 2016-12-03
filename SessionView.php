@@ -25,6 +25,10 @@
             button{
                 width: 500px
             }
+
+            body {
+                background-image:url("img/back.jpg");
+            }
         </style>
 
 

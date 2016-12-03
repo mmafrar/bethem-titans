@@ -28,6 +28,9 @@
             span{
                 padding: 20px;
             }
+            body {
+                background-image:url("img/back.jpg");
+            }
         </style>
 
 
